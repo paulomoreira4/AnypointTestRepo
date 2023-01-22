@@ -36,6 +36,6 @@ http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/cu
 	<flow name="goodbyeFlow" doc:id="a768f3b5-5502-4e21-9491-1e22c999cf4e" >
 		<vm:listener queueName="goodbye" doc:name="VM goodbye" doc:id="86b16d65-0d7e-4595-90db-a16f376bd24d" config-ref="VM_Config"/>
 		<set-payload value="#[upper('Goodbye') ++ ' ' ++ (attributes.queryParams.fullname default 'Maxine')]" doc:name="Goodbye" doc:id="d74d34e4-0545-4a3f-bc55-c2e658faa6c1" />
-		<logger level="INFO" doc:name="fullName" doc:id="108b8cdd-9814-403d-92b6-3fefc559dfbf" message="#[attributes.queryParams.fullname]"/>
+		<logger level="INFO" doc:name="fullNameNEW" doc:id="108b8cdd-9814-403d-92b6-3fefc559dfbf" message="#[attributes.queryParams.fullname]"/>
 	</flow>
 </mule>
